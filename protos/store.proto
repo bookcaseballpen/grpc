@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package Store;
+
+
+
+service Store {
+    rpc GetStore (StoreReq) returns (StoreRes) {};
+}
+
+message StoreReq {
+    int32 StoreID = 1;
+    string Language = 2;
+}
+
+message StoreRes {
+    string  Message = 1;
+}
